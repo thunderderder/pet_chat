@@ -1,0 +1,172 @@
+:root {
+    --primary-color: #FFB347;
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-color: #333;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    color: #4a4a4a;
+}
+
+header p {
+    color: #888;
+    font-size: 14px;
+}
+
+.upload-area {
+    border: 2px dashed #ddd;
+    border-radius: 16px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+}
+
+.upload-area:hover {
+    border-color: var(--primary-color);
+    background-color: #fffdf9;
+}
+
+.upload-placeholder {
+    text-align: center;
+}
+
+.upload-placeholder .icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.upload-placeholder p {
+    color: #666;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Loading */
+#loading-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-bottom: 24px;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 24px;
+    background: #fff;
+    position: relative;
+}
+
+.thought-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.card-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #aaa;
+    border-top: 1px solid #eee;
+    padding-top: 12px;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    flex: 1;
+    padding: 14px;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:active {
+    opacity: 0.8;
+}
+
+.primary-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.secondary-btn {
+    background-color: #f0f0f0;
+    color: #666;
+}

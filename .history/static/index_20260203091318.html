@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宠物读心师</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🐱 宠物读心师 🐶</h1>
+            <p>看看毛孩子在想什么？</p>
+        </header>
+
+        <main>
+            <div id="upload-section" class="upload-area">
+                <input type="file" id="file-input" accept="image/*" hidden>
+                <div class="upload-placeholder" onclick="document.getElementById('file-input').click()">
+                    <div class="icon">📷</div>
+                    <p>点击上传猫/狗照片</p>
+                </div>
+            </div>
+
+            <div id="loading-section" class="hidden">
+                <div class="spinner"></div>
+                <p>正在解读中...</p>
+            </div>
+
+            <div id="result-section" class="hidden">
+                <div id="share-card" class="card">
+                    <img id="result-image" src="" alt="宠物照片">
+                    <div class="card-content">
+                        <p id="result-text" class="thought-text"></p>
+                        <div class="card-footer">
+                            <span>@宠物读心师</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actions">
+                    <button id="retry-btn" class="secondary-btn">再测一张</button>
+                    <button id="save-btn" class="primary-btn">保存卡片</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
